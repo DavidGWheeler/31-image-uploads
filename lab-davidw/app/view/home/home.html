@@ -6,7 +6,9 @@
   <br><label class="search-label">search gallery: </label><br>
   <ul>
     <input class="input-search" ng-model="homeCtrl.searchTerm" type="text" name="gallery search field" value="">
-    <gallery-item ng-repeat="item in homeCtrl.galleries | fuzzySearch : homeCtrl.searchTerm" gallery="item"></gallery-item>
+    <uib-accordian close-others="oneAtATime">
+      <gallery-item ng-repeat="item in homeCtrl.galleries | fuzzySearch : homeCtrl.searchTerm" gallery="item"></gallery-item>
+    <uib-accordian>
   </ul>
 
   <select
